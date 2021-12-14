@@ -8,19 +8,13 @@ The Cisco Intersight Terraform provider is now available for use direcly from th
 ## Installation
 
 - Terraform 0.14.0 or later must be installed
-- Access to the Terraform registry via the internet must be available
 
-Clone or fork the terraform-intersight-hyperflex repository to create a local copy of the scripts to work with.
 
 ```
 git clone https://github.com/ucs-compute-solutions/terraform-intersight-hyperflex.git
 ```
 
-## Usage
-The example scripts are in three folders:
-- create_edge_profile: Contains the scripts to install HyperFlex Edge clusters
-- create_profile: Contains the scripts to install standard HyperFlex clusters
-- intersight-moids: Contains a module to retrieve the moids of the physical servers from Intersight by their names
+
 
 ### API Access
 Authentication with the Intersight API requires the use of API keys that should be generated within the Intersight UI.  See (https://intersight.com/help) or (https://communities.cisco.com/docs/DOC-76947) for more information on generating and using API keys. The values for the API key and the path to the key file must be entered into the terraform.tfvars file:
@@ -37,7 +31,6 @@ Authentication with the Intersight API requires the use of API keys that should 
 ### Variables
 The remainder of the variables in the terraform.tfvars file must be modified with your unique values for the cluster you wish to install.
 
-* Note: The required and optional variables are different for standard and Edge clusters. Please ensure you are using the appropriate example .tfvars file as the reference for your cluster(s).
 
 ### Execution
 Once all the required variables are entered, from a command line change to the create_profile or create_edge_profile folder as appropriate and run the following commands:
